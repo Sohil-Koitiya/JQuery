@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Show Effect In Jquery</title>
+</head>
+<body>
+    <hr>
+    <h1>Hide Show Effect In Jquery</h1>
+    
+    <div id="box">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Similique aspernatur ratione perferendis sunt accusantium repellendus repudiandae itaque veniam 
+        facere rem saepe hic, harum laudantium laboriosam a sit, mollitia vel quo!
+    </div>
+    <hr>
+
+    <button id="btnHide">Hide</button>
+    <button id="btnShow">Show</button>
+    <button id="btnToggle">Toggle</button>
+
+    <!-- jquery -->
+
+    <script src="../jquery-3.7.1.min.js"></script>
+
+    <script>
+        $("body").css({ backgroundColor: "tan" , textAlign: "center" });
+        $("#box").css({
+            backgroundColor: "blue",
+            color: "white",
+            width: "400px",
+            margin: "auto",
+            border: "8px solid pink"
+        });
+        $("button").css({
+            backgroundColor: "brown",
+            color: "khakhi",
+            padding: "10px 30px",
+            margin: "10px"
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            // Hide Selector
+           
+            $("#btnHide").click(function () {
+                $("#box").hide()
+                console.log("Box Hide");
+            });
+
+            // Show Selector
+           
+            $("#btnShow").click(function () {
+                $("#box").show()
+                console.log("Box Show");
+            });
+
+            // Toggle Selector
+           
+            $("#btnToggle").click(function () {
+                $("#box").toggle()
+                console.log("Box Toggle");
+            });
+
+        });
+    </script>
+</body>
+</html>
