@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animate Effect In Jquery</title>
+    <title>Add Remove Class In Jquery</title>
+    <style>
+        .active{
+            background-color: teal;
+            color: khaki;
+        }
+    </style>
   </head>
   <body>
     <hr />
-    <h1>Animate Effect In Jquery</h1>
+    <h1>Add Remove Class In Jquery</h1>
 
     <div id="box">
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis
@@ -16,8 +22,9 @@
     </div>
     <hr />
 
-    <button id="btnAnimate">Animate</button>
-
+    <button id="btnAddClass">Add Class</button>
+    <button id="btnRemoveClass">Remove Class</button>
+    <button id="btnToggleClass">Toggle Class</button>
     <!-- jquery  -->
 
     <script src="../jquery-3.7.1.min.js"></script>
@@ -43,14 +50,17 @@
 
     <script>
       $(document).ready(function () {
-        // Animate Hide Selector
-
-        $("#btnAnimate").click(function () {
-            $("#box").animate({
-              width: "400px",
-              borderRadius: "20px",
-              padding: "20px"
-            });
+        // Add Class
+        $("#btnAddClass").click(function () {
+          $("h1").addClass("active");
+        });
+        // Remove Class
+        $("#btnRemoveClass").click(function () {
+          $("h1").removeClass("active");
+        });
+        // Toggle Class
+        $("#btnToggleClass").click(function () {
+          $("h1").toggleClass("active");
         });
 
       });

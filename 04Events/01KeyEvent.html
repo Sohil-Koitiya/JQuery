@@ -16,11 +16,11 @@
     </div>
     <hr />
 
-    <button id="btnAnimate">Animate</button>
+    <input type="text" id="inp1">
 
     <!-- jquery  -->
 
-    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="../jquery-3.7.1.min.js  "></script>
 
     <!-- CSS JQuery  -->
 
@@ -43,13 +43,28 @@
 
     <script>
       $(document).ready(function () {
-        // Animate Hide Selector
 
-        $("#btnAnimate").click(function () {
-            $("#box").animate({
-              width: "400px",
-              borderRadius: "20px",
-              padding: "20px"
+        // Key Down Event
+
+        $("input").keydown(function () {
+            $("body").css({
+              backgroundColor: "yellow"
+            });
+        });
+
+        // Key up Event
+
+        $("input").keyup(function () {
+            $("body").css({
+              backgroundColor: "green"
+            });
+        });
+
+        // Key Press Event
+
+        $("input").keypress(function () {
+            $("body").css({
+              backgroundColor: "blue"
             });
         });
 
